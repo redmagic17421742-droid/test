@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing Page</title>
+    <style>
+        /* ==========================================================================
+           1. RESET & UNIVERSAL STYLES
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ==========================================================================
+           2. NAVIGATION BAR STYLING
+           ========================================================================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION STYLING (Dynamic Gradient)
+           ========================================================================== */
+        .hero {
+            background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        /* Interactive Call to Action Button */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ==========================================================================
+           4. FEATURES GRID LAYOUT
+           ========================================================================== */
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 60px 10%;
+            background-color: #f8f9fa;
+        }
+
+        .feature-card {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #333333;
+        }
+
+        .feature-card p {
+            color: #666666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           5. FOOTER STYLING
+           ========================================================================== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333333;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        /* ==========================================================================
+           6. RESPONSIVE MEDIA QUERIES
+           ========================================================================== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">MyBrand</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Your New Website</h1>
+            <p>A simple, clean, and fully responsive layout built entirely from scratch with HTML and CSS in one single file.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>Clean Code</h3>
+            <p>Structured semantics with HTML5 elements making it highly accessible and clean.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Modern Styling</h3>
+            <p>Utilizes Flexbox layouts, sleek gradients, and elegant hover animations.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Fully Responsive</h3>
+            <p>Designed to scale dynamically and look flawless across mobile, tablet, and desktop screens.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyBrand. Built with ❤️ using HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
